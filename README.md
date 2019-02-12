@@ -6,7 +6,7 @@
 4. Reporte generado por el validador de la W3C, para los tres sitios.
 5. Análisis de compatibilidad de exploradores, para los tres sitios
 
-#Instrucciones Paso por Paso
+# Instrucciones Paso por Paso
 
 1. Diseñe un sitio/web página que tenga 5 secciones. El contenido es libre y está versión inicial del sitio servirá como un sketch para la diagramación y el contenido, es decir, para esta versión del sitio se debe usar solo HTML y hojas de estilo definidas por usted.  
 2. Para la siguiente versión de su sitio, utilice Foundation . Descargue la versión completa de Foundation (http://foundation.zurb.com/sites/download.html/).

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fresita</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container" id="container" name="container">
+    <!-- Barra de navegacion -->
+    <div class="nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Ventanas</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="banner.html">Banner</a>
+            <a class="dropdown-item" href="color.html">Colores</a>
+            <a class="dropdown-item disabled" href="alerta.html">Alerta basica</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../contacto.html">Contactenos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../quienes.html">Quienes Somos</a>
+        </li>
+      </ul>
+    </div>
+    <!-- Cuerpo. -->
+    <div class="body">
+      <p>Mostrando colores que se pueden adaptar con bootstrap</p>
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link con acceso directo.
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Esta información esta oculta a simple vista, pero bootstrap me permite crear un boton de despliegue.
+        </div>
+      </div>
+
+      <div class="alert alert-primary" role="alert">
+        Alerta (Esto es una alerta).
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+
+</html>

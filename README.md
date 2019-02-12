@@ -1,6 +1,5 @@
 # Programacion_Web
 # Taller 1
-# Punto 1: 
 1. Implementación de un sitio web (5 secciones) usando HTML y CSS (sin plantillas ni frameworks).  
 2. Implementación de un sitio web (5 secciones) usando HTML, CSS, y bootstrap. Se deben usar por lo menos 15 componentes/controles diferentes de bootstrap.
 3. Implementación de un sitio web (5 secciones) usando HTML, CSS, y foundation. Se deben usar por lo menos 15 componentes/controles diferentes de foundation.

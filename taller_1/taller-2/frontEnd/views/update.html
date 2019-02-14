@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulario de Envio</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Nav -->
+    <div class="nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="delete.html">Delete</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="update.html">Update</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Body Delete -->
+    <div id="Update">
+      <p class="h4">Update information</p>
+      <label>Card Number:</label>
+      <label><input type="text" class="form-control" id="card_preview"></label>
+      <button type="submit" class="btn btn-primary" onclick="BuscarActual()">Accept</button>
+    </div>
+
+    <div id="show">
+
+    </div>
+    <div id="oculto" style='display:none'>
+      <label >Are you sure to update?</label>
+      <label>
+        <button type="submit" class="btn btn-primary" onclick="InitUpdate()">Yes</button>
+        <button type="submit" class="btn btn-primary" onclick="Clear()">No</button></label>
+    </div>
+
+      <div id="body" style='display:none'>
+        <p class="h4">Please complete the form bellow.</p>
+        <p class="h5">Personal Information</p>
+        <div class="form-group">
+          <label for="PrimerNombre">First Name:</label>
+          <label for="PrimerNombre"> <input type="text" class="form-control" id="PrimerNombre" placeholder="Enter Name"> </label>
+          <label for="apellido">Last Name:</label>
+          <label for="apellido"><input type="text" class="form-control" id="apellido" placeholder="Enter Last Name"></label>
+          <label for="email">Email:</label>
+          <label for="email"><input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email"> </label>
+          <small id="Email" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <p class="h5">Credi card information:</p>
+        <!-- Credit card type (Falta) -->
+        <div class="form-group">
+          <label for="typeCard">Credit Card:</label>
+          <label for="typeCard">
+            <select class="form-control" id="typeCard">
+              <option id="typeCard" value="Visa">Visa</option>
+              <option id="typeCard" value="Master Card">Master Card</option>
+            </select>
+          </label>
+          <label for="cardHolder">CardHolder:</label>
+          <label for="cardHolder"><input type="text" class="form-control" id="cardHolder"></label>
+          <label for="cardNumber">Card Number:</label>
+          <label for="cardNumber"><input type="text" class="form-control" id="cardNumber1"></label>
+        </div>
+
+
+        <div class="form-group">
+          <label for="cvv2">CVV2:</label>
+          <label for="cvv2"><input type="text" class="form-control" id="cvv2"></label>
+          <label for="month">Exp date:</label>
+          <label for="month">
+            <select class="form-control" id="month">
+              <option id="month" value="1">1</option>
+              <option id="month" value="2">2</option>
+              <option id="month" value="3">3</option>
+              <option id="month" value="4">4</option>
+              <option id="month" value="5">5</option>
+              <option id="month" value="6">6</option>
+              <option id="month" value="7">7</option>
+              <option id="month" value="8">8</option>
+              <option id="month" value="9">9</option>
+              <option id="month" value="10">10</option>
+              <option id="month" value="11">11</option>
+              <option id="month" value="12">12</option>
+            </select>
+          </label>
+          <label for="month">
+            <select class="form-control" id="year">
+              <option id="year" value="2020">2020</option>
+              <option id="year" value="2021">2021</option>
+              <option id="year" value="2022">2022</option>
+              <option id="year" value="2023">2023</option>
+              <option id="year" value="2024">2024</option>
+              <option id="year" value="2025">2025</option>
+            </select>
+          </label>
+        </div>
+        <!-- Exp date (falta)-->
+
+        <p class="h5">Biling Address:</p>
+        <div class="form-group">
+          <label for="streetAddress">Street Address:</label>
+          <label for="streetAddress"><input type="text" class="form-control" id="streetAddress"></label>
+          <label for="city">City:</label>
+          <label for="city"><input type="text" class="form-control" id="city"></label>
+          <label for="state">State:</label>
+          <label for="state">
+            <select class="form-control" id="state">
+              <option id="state" value="Bogota">Bogota</option>
+              <option id="state" value="Cundinamarca">Cundinamarca</option>
+              <option id="state" value="Antioquia">Antioquia</option>
+              <option id="state" value="Meta">Meta</option>
+              <option id="state" value="Amazonas">Amazonas</option>
+            </select>
+          </label>
+          <label for="zip">Zip:</label>
+          <label for="zip"><input type="text" class="form-control" id="zip"></label>
+        </div>
+        <!-- State -->
+
+        <!--Country(falta) -->
+
+        <div class="form-group">
+          <label for="country">Country:</label>
+          <label for="country">
+            <select class="form-control" id="country">
+              <option id="country" value="United States of America">United States of America</option>
+              <option id="country" value="Colombia">Colombia</option>
+              <option id="country" value="Peru">Peru</option>
+              <option id="country" value="Ecuador">Ecuador</option>
+            </select>
+          </label>
+          <label for="phone">Phone:</label>
+          <label for="phone"><input type="text" class="form-control" id="phone"></label>
+        </div>
+
+        <!-- Security code -->
+        <div class="form-group">
+          <label for="securityCode">security code:</label>
+          <label for="zip">Captcha</label>
+        </div>
+
+        <div class="form-group">
+          <label for="securityCode">Enter security code:</label>
+          <input type="text" class="form-control" id="securityCode">
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="update()">Accept</button>
+
+    </div>
+    <div class="alert alert-success" role="alert" id="ok" style='display:none'>
+      Update Correct!!.
+    </div>
+
+  </div>
+  <script src="../control/cindex.js"></script>
+</body>
+
+</html>

@@ -12,111 +12,121 @@
 
 <body>
   <div class="container" id="container" name="container">
-    <!--  -->
+    <!-- Nav -->
+    <div class="nav">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="delete.html">Delete</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="update.html">Update</a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="body" style='display:block'>
       <p class="h4">Please complete the form bellow.</p>
       <p class="h5">Personal Information</p>
       <div class="form-group">
         <label for="PrimerNombre">First Name:</label>
-        <input type="text" class="form-control" id="PrimerNombre" placeholder="Enter Name">
-      </div>
-      <div class="form-group">
+        <label for="PrimerNombre"> <input type="text" class="form-control" id="PrimerNombre" placeholder="Enter Name"> </label>
         <label for="apellido">Last Name:</label>
-        <input type="text" class="form-control" id="apellido"  placeholder="Enter Last Name">
-      </div>
-      <div class="form-group">
+        <label for="apellido"><input type="text" class="form-control" id="apellido" placeholder="Enter Last Name"></label>
         <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email">
+        <label for="email"><input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email"> </label>
         <small id="Email" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
+
       <p class="h5">Credi card information:</p>
       <!-- Credit card type (Falta) -->
       <div class="form-group">
         <label for="typeCard">Credit Card:</label>
-        <select class="form-control" id="typeCard">
-          <option>Visa</option>
-          <option>Master Card</option>
-        </select>
-      </div>
-      <div class="form-group">
+        <label for="typeCard">
+          <select class="form-control" id="typeCard">
+            <option id="typeCard" value="Visa">Visa</option>
+            <option id="typeCard" value="Master Card">Master Card</option>
+          </select>
+        </label>
         <label for="cardHolder">CardHolder:</label>
-        <input type="text" class="form-control" id="cardHolder">
-      </div>
-      <div class="form-group">
+        <label for="cardHolder"><input type="text" class="form-control" id="cardHolder"></label>
         <label for="cardNumber">Card Number:</label>
-        <input type="text" class="form-control" id="cardNumber">
+        <label for="cardNumber"><input type="text" class="form-control" id="cardNumber"></label>
       </div>
-      <div class="form-group">
-        <label for="cvv2">CVV2:</label>
-        <input type="text" class="form-control" id="cvv2">
-      </div>
-      <!-- Exp date (falta)-->
+
 
       <div class="form-group">
-    <label for="month">Exp date:</label>
-    <select class="form-control" id="month">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-      <option>6</option>
-      <option>7</option>
-      <option>8</option>
-      <option>9</option>
-      <option>10</option>
-      <option>11</option>
-      <option>12</option>
-    </select>
-    <select class="form-control" id="year">
-      <option>2020</option>
-      <option>2021</option>
-      <option>2022</option>
-      <option>2023</option>
-      <option>2024</option>
-      <option>2025</option>
-    </select>
-  </div>
+        <label for="cvv2">CVV2:</label>
+        <label for="cvv2"><input type="text" class="form-control" id="cvv2"></label>
+        <label for="month">Exp date:</label>
+        <label for="month">
+          <select class="form-control" id="month">
+            <option id="month" value="1">1</option>
+            <option id="month" value="2">2</option>
+            <option id="month" value="3">3</option>
+            <option id="month" value="4">4</option>
+            <option id="month" value="5">5</option>
+            <option id="month" value="6">6</option>
+            <option id="month" value="7">7</option>
+            <option id="month" value="8">8</option>
+            <option id="month" value="9">9</option>
+            <option id="month" value="10">10</option>
+            <option id="month" value="11">11</option>
+            <option id="month" value="12">12</option>
+          </select>
+        </label>
+        <label for="month">
+          <select class="form-control" id="year">
+            <option id="year" value="2020">2020</option>
+            <option id="year" value="2021">2021</option>
+            <option id="year" value="2022">2022</option>
+            <option id="year" value="2023">2023</option>
+            <option id="year" value="2024">2024</option>
+            <option id="year" value="2025">2025</option>
+          </select>
+        </label>
+      </div>
+      <!-- Exp date (falta)-->
 
       <p class="h5">Biling Address:</p>
       <div class="form-group">
         <label for="streetAddress">Street Address:</label>
-        <input type="text" class="form-control" id="streetAddress">
-      </div>
-      <div class="form-group">
+        <label for="streetAddress"><input type="text" class="form-control" id="streetAddress"></label>
         <label for="city">City:</label>
-        <input type="text" class="form-control" id="city">
+        <label for="city"><input type="text" class="form-control" id="city"></label>
+        <label for="state">State:</label>
+        <label for="state">
+          <select class="form-control" id="state">
+            <option id="state" value="Bogota">Bogota</option>
+            <option id="state" value="Cundinamarca">Cundinamarca</option>
+            <option id="state" value="Antioquia">Antioquia</option>
+            <option id="state" value="Meta">Meta</option>
+            <option id="state" value="Amazonas">Amazonas</option>
+          </select>
+        </label>
+        <label for="zip">Zip:</label>
+        <label for="zip"><input type="text" class="form-control" id="zip"></label>
       </div>
       <!-- State -->
 
-      <div class="form-group">
-    <label for="state">State:</label>
-    <select class="form-control" id="state">
-      <option id="Bogota">Bogota</option>
-      <option id="Cundinamarca">Cundinamarca</option>
-      <option id="Antioquia">Antioquia</option>
-      <option id="Meta">Meta</option>
-      <option id="Amazonas">Amazonas</option>
-    </select>
-  </div>
-      <div class="form-group">
-        <label for="zip">Zip:</label>
-        <input type="text" class="form-control" id="zip">
-      </div>
       <!--Country(falta) -->
 
       <div class="form-group">
-    <label for="state">Country:</label>
-    <select class="form-control" id="Country">
-      <option id="United States of America">United States of America</option>
-      <option id="Colombia">Colombia</option>
-      <option id="Peru">Peru</option>
-      <option id="Ecuador">Ecuador</option>
-    </select>
-  </div>
-      <div class="form-group">
+        <label for="country">Country:</label>
+        <label for="country">
+          <select class="form-control" id="country">
+            <option id="country" value="United States of America">United States of America</option>
+            <option id="country" value="Colombia">Colombia</option>
+            <option id="country" value="Peru">Peru</option>
+            <option id="country" value="Ecuador">Ecuador</option>
+          </select>
+        </label>
         <label for="phone">Phone:</label>
-        <input type="text" class="form-control" id="phone">
+        <label for="phone"><input type="text" class="form-control" id="phone"></label>
       </div>
+
       <!-- Security code -->
       <div class="form-group">
         <label for="securityCode">security code:</label>
@@ -131,18 +141,20 @@
       <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="check">
         <label class="form-check-label" for="exampleCheck1">Check here to certify that you are 18 years old of age of older an agree to the
-        <span class="text-warning">Terms</span> of this purchase.</label>
+          <span class="text-warning">Terms</span> of this purchase.</label>
       </div>
       <button type="submit" class="btn btn-primary" onclick="Enviar()">Accept</button>
 
-      <div class="recibirMensajes">
+    </div>
 
-      </div>
+
+    <div class="alert alert-success" role="alert" id="oculto" style='display:none'>
+      Creation Complete!!.
+    </div>
+
   </div>
+  <script src="../control/cindex.js"></script>
 
-   <script src="../control/cindex.js" ></script>
-
-  </script>
 </body>
 
 </html>

@@ -1,0 +1,6 @@
+tittle,link,Bavaria,Sat Mar 09 16:26:39 COT 2019
+Solucion con andres,https://ayddup.wordpress.com/2011/08/08/la-memoria-en-java-garbage-collector-y-el-metodo-finalize/,Bavaria,Fri Mar 15 08:14:27 COT 2019 
+asd,https://ayddup.wordpress.com/2011/08/08/la-memoria-en-java-garbage-collector-y-el-metodo-finalize/,Bavaria,Fri Mar 15 08:14:27 COT 2019 
+Solucion con andres,https://ayddup.wordpress.com/2011/08/08/la-memoria-en-java-garbage-collector-y-el-metodo-finalize/,Bavaria,Fri Mar 15 08:20:26 COT 2019 
+titulo job,link ford,Ford,Fri Mar 15 15:17:05 COT 2019 
+titulo1234,link,Compensar,Fri Mar 15 15:17:05 COT 2019 

@@ -1,0 +1,21 @@
+Andres.com,titulo,Nueva Descripcion,Sat Mar 09 14:26:39 COT 2019 ,maxell,1,5
+asd,asd,asd,Sat Mar 09 14:26:39 COT 2019,asd,2,0
+asd,asd,asd,Sat Mar 09 14:28:47 COT 2019,123132,3,5
+asd,sd,asd,Sat Mar 09 14:36:38 COT 2019,asd,4,4
+asd,asd,asd,Sat Mar 09 14:39:43 COT 2019,asd1,5,0
+asd,asd,asd,Sat Mar 09 14:41:17 COT 2019,asd,6,0
+asd,asd,asd,Sat Mar 09 14:44:31 COT 2019,asd,7,2
+asd,asd,asd,Sat Mar 09 14:47:25 COT 2019,asd,8,1
+asd,asd,asd,Sat Mar 09 14:49:07 COT 2019,asd,9,0
+asd,asd,asd,Sat Mar 09 14:49:07 COT 2019,asd,10,0
+asd,asd,asd,Sat Mar 09 14:49:07 COT 2019,asd,11,0
+asd,asd,asd,Sat Mar 09 14:49:07 COT 2019,asd,12,1
+Link,titulo,asd123,Sat Mar 09 14:54:07 COT 2019,Maxell_1696,13,0
+https://ayddup.wordpress.com/2011/08/08/la-memoria-en-java-garbage-collector-y-el-metodo-finalize/,Solucion con andres,,Sat Mar 09 14:54:07 COT 2019,Maxell,14,0
+https://ayddup.wordpress.com/2011/08/08/la-memoria-en-java-garbage-collector-y-el-metodo-finalize/,Solucion con andres,,Sat Mar 09 14:54:07 COT 2019,Maxell,15,0
+asd,asd,asd,Sat Mar 09 15:11:36 COT 2019,asd,16,0
+asd,asd,asd,Sat Mar 09 15:11:36 COT 2019,asd,17,0
+asd,asd,asd,Sat Mar 09 15:11:36 COT 2019,asd,18,0
+asd,asd,asd,Sat Mar 09 16:44:07 COT 2019,asd,19,0
+asd,asd,asd,Sat Mar 09 16:44:07 COT 2019,asd,20,0
+https://ayddup.wordpress.com/2011/08/08/la-memoria-en-java-garbage-collector-y-el-metodo-finalize/,Ask HN: noticia 56,Nueva Descripcion,Sat Mar 09 23:44:53 COT 2019,Maxell,28,3

@@ -2,6 +2,7 @@ package Model.Dao;
 
 import java.util.*;
 
+
 import Model.Publicacion;
 
 /**
@@ -65,13 +66,15 @@ public class PublicacionDaoImplement {
     /**
      * @param id_publicacion
      */
-    public void deletePublicacion(long id_publicacion) {
-        // TODO implement here
+    public boolean deletePublicacion(long id_publicacion) {
+    	PublicacionDao pd = new PublicacionDao();
+    	boolean resultado = pd.deletePublicacion(id_publicacion);
+    	return resultado;
     }
     
-    public String searchAll() {
+    public List<Publicacion> searchAll() {
         PublicacionDao pdi = new PublicacionDao();
-        String url = "";
+        List<Publicacion> url = new ArrayList<Publicacion>();
         url = pdi.searchAll();
         return url;
     }

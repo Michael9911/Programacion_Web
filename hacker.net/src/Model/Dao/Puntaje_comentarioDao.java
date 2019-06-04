@@ -67,7 +67,7 @@ public class Puntaje_comentarioDao extends Puntaje_comentarioDaoImplement {
      * @param puntaje_comentario
      */
     public void deletePuntaje_comentario(Puntaje_comentario puntaje_comentario) {
-        // TODO implement here
+        
     }
 
 }

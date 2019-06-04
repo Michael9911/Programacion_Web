@@ -15,8 +15,8 @@ import Controller.cPublicacion;
 /**
  * Servlet implementation class index
  */
-@WebServlet("/index")
-public class index extends HttpServlet {
+//@WebServlet("/index")
+public class index extends HttpServlet{
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -69,7 +69,6 @@ public class index extends HttpServlet {
 			break;
 		}
 	}
-	
 	private void news(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		cPublicacion cp = new cPublicacion();
@@ -103,11 +102,11 @@ public class index extends HttpServlet {
 	private void show(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		cPublicacion cp = new cPublicacion();
-		String respuesta = cp.mostrarShow();
+		//String respuesta = cp.mostrarShow();
 		PrintWriter out = response.getWriter();
 		
 		request.getRequestDispatcher("/includes/header.jsp").include(request, response);
-		out.println(respuesta);
+		//out.println(respuesta);
 		request.getRequestDispatcher("/includes/footer.jsp").include(request, response);
 		if(validarSesion(request, response))
 		{

@@ -6,13 +6,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
 
+
 import Model.Publicacion;
 
 /**
  * 
  */
 public class PublicacionDao extends PublicacionDaoImplement {
-
+	
+	private static final Map<String, Publicacion> empMap = new HashMap<String, Publicacion>();
     /**
      * Default constructor
      */
@@ -104,14 +106,8 @@ public class PublicacionDao extends PublicacionDaoImplement {
         } 
     }
 
-    /**
-     * @param id_publicacion
-     */
-    public void deletePublicacion(long id_publicacion) {
-        // TODO implement here
-    }
     
-    public String searchAll() {
+    public List<Publicacion> searchAll() {
     	 try { 
 			  
 	            // Initialize the database 
@@ -124,18 +120,31 @@ public class PublicacionDao extends PublicacionDaoImplement {
 	  
 	            
 	            ResultSet rs = st.executeQuery(); 
-	            String url = "";
+	           
+	            List<Publicacion> url = new ArrayList<Publicacion>();
+	            int ba = 0;
 	            while(rs.next())
 	            {
-	            	url += "<label> <a href='"+rs.getString("link") + "'>" + rs.getString("tittle") + 
-	            			"</a> Puntos: " + rs.getString("puntaje") + "</label> <br>";
+	            	Publicacion p = new Publicacion();
+	            	p.setId_publicacion( Long.parseLong( rs.getString("id_submit") ) );
+	            	p.setLink( rs.getString("link") );
+	            	p.setTitulo( rs.getString("tittle") );
+	            	p.setDescription( rs.getString("description") );
+	            	p.setPuntaje( Integer.parseInt( rs.getString("puntaje") ) );
+	            	
+	            	String a = ""+p.getId_publicacion();
+	            	
+	            	//empMap.put(a,p);
+	            	url.add(p);
+	            	
 	            }
+	            //Collection<Publicacion> c = empMap.values();
+//	            url.addAll(c);
 	            // Close all the connections 
 	            st.close(); 
 	            con.close(); 
-	  
-	            // Get a writer pointer  
-	            // to display the succesful result
+	            
+	           
 	            return url;
 	        } 
 	        catch (Exception e) { 
@@ -201,5 +210,35 @@ public class PublicacionDao extends PublicacionDaoImplement {
               return false;
           } 
     }
+    
+    
+    public boolean deletePublicacion(long id_publicacion)
+    {
+    	try { 
+			  
+      		 // Initialize the database 
+              Connection con = connection.initializeDatabase(); 
+    
+              // Create a SQL query to insert data into demo table 
+              // demo table consists of two columns, so two '?' is used 
+              PreparedStatement st = con 
+                     .prepareStatement("DELETE FROM submit WHERE id_submit = " + id_publicacion);
+              
+              st.executeUpdate();
+              
+              st.close(); 
+              con.close(); 
+    
+              // Get a writer pointer  
+              // to display the succesful result
+              return true;
+          } 
+          catch (Exception e) { 
+              return false;
+          } 
+    }
+    
+    
+    List<Publicacion> list;
     
 }

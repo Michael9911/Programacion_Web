@@ -3,6 +3,7 @@ package Controller;
 import java.time.Instant;
 import java.util.*;
 
+
 import Model.Colocar_submit;
 import Model.Publicacion;
 import Model.Puntaje_submit;
@@ -122,63 +123,57 @@ public class cPublicacion {
     /**
      * 
      */
-    public String mostrarAsk() {
-    	String respuestas = "";
-        String[] news;
-        String retorno = "";
-        PublicacionDaoImplement pdi = new PublicacionDaoImplement();
-        respuestas = pdi.searchAll();
-        news = respuestas.split("<br>");
-        for(int i = 0; i < news.length; i++)
-        {
-        	if(news[i].contains("Ask HN:") == true)
-        	{
-        		retorno = retorno + news[i] + "<br>";
-        	}
-        }
+    public List<Publicacion> mostrarAsk() {
+    	PublicacionDaoImplement pdi = new PublicacionDaoImplement();
+    	List<Publicacion> respuestas = pdi.searchAll();
+    	List<Publicacion> retorno = new ArrayList<Publicacion>();
         
+        respuestas = pdi.searchAll();
+        for (Publicacion prueba:respuestas) 
+        {
+        	if(prueba.getTitulo().contains("Ask HN:") == true)
+        	{
+        		retorno.add(prueba);
+        	}
+		}
         return retorno;
     }
 
     /**
      * 
      */
-    public String mostrarNews() {
-        String respuestas = "";
-        String[] news;
-        String retorno = "";
-        PublicacionDaoImplement pdi = new PublicacionDaoImplement();
-        respuestas = pdi.searchAll();
-        news = respuestas.split("<br>");
-        for(int i = 0; i < news.length; i++)
-        {
-        	if(news[i].contains("Show HN:") == false && news[i].contains("Ask HN:") == false)
-        	{
-        		retorno = retorno + news[i] + "<br>";
-        	}
-        }
+    public List<Publicacion> mostrarNews() {
+    	PublicacionDaoImplement pdi = new PublicacionDaoImplement();
+    	List<Publicacion> respuestas = pdi.searchAll();
+    	List<Publicacion> retorno = new ArrayList<Publicacion>();
         
+        respuestas = pdi.searchAll();
+        for (Publicacion prueba:respuestas) 
+        {
+        	if(prueba.getTitulo().contains("Show HN:") == false && prueba.getTitulo().contains("Ask HN:") == false)
+        	{
+        		retorno.add(prueba);
+        	}
+		}
         return retorno;
     }
 
     /**
      * 
      */
-    public String mostrarShow() {
-    	String respuestas = "";
-        String[] news;
-        String retorno = "";
-        PublicacionDaoImplement pdi = new PublicacionDaoImplement();
-        respuestas = pdi.searchAll();
-        news = respuestas.split("<br>");
-        for(int i = 0; i < news.length; i++)
-        {
-        	if(news[i].contains("Show HN:") == true)
-        	{
-        		retorno = retorno + news[i] + "<br>";
-        	}
-        }
+    public List<Publicacion> mostrarShow() {
+    	PublicacionDaoImplement pdi = new PublicacionDaoImplement();
+    	List<Publicacion> respuestas = pdi.searchAll();
+    	List<Publicacion> retorno = new ArrayList<Publicacion>();
         
+        respuestas = pdi.searchAll();
+        for (Publicacion prueba:respuestas) 
+        {
+        	if(prueba.getTitulo().contains("Show HN:") == true)
+        	{
+        		retorno.add(prueba);
+        	}
+		}
         return retorno;
     }
 
@@ -192,8 +187,17 @@ public class cPublicacion {
     /**
      * @param id_publicacion
      */
-    public void removerPublicacion(long id_publicacion) {
-        // TODO implement here
+    public void removerPublicacion(long id_publicacion, String user_name) {
+        PublicacionDaoImplement pdi = new PublicacionDaoImplement();
+        Publicacion respuesta = pdi.searchById(id_publicacion);
+        if(respuesta != null)
+        {
+        	Puntaje_submitDaoImplement psdai = new Puntaje_submitDaoImplement();
+        	//psdai.searchPuntaje_submit(puntaje_submit);
+        	pdi.deletePublicacion(id_publicacion);
+        }
+        
+        
     }
     /**
      * 
